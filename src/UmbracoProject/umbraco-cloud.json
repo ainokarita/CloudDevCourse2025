@@ -1,7 +1,17 @@
 {
   "Deploy": {
     "Project": {
-      "Workspaces": []
+      "Name": "blueprinttestbellagroup",
+      "Alias": "blueprinttestbellagroup",
+      "Id": "46adb54a-43b7-46bf-809a-f4193628f577",
+      "Workspaces": [
+        {
+          "Id": "48aba10f-b868-4420-9ac8-3634688fe929",
+          "Name": "Live",
+          "Type": "live",
+          "Url": "https://blueprinttestbellagroup.euwest01.umbraco.io"
+        }
+      ]
     },
     "Settings": {}
   },
