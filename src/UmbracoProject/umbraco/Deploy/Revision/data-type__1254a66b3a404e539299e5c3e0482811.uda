@@ -1,0 +1,21 @@
+{
+  "Name": "Home Page - Testamonials - Block List Property Editor UI",
+  "EditorAlias": "Umbraco.BlockList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockList",
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "d7e410b8-e1ed-42b2-8943-8dc21f8dc464",
+        "label": "{=testimonialAuthor}"
+      }
+    ]
+  },
+  "Udi": "umb://data-type/1254a66b3a404e539299e5c3e0482811",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/d7e410b8e1ed42b289438dc21f8dc464"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

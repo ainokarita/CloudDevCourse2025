@@ -1,0 +1,11 @@
+{
+  "Name": "Home Page - Color Settings - Gradient Start - Eye Dropper Color Picker Property Editor UI",
+  "EditorAlias": "Umbraco.ColorPicker.EyeDropper",
+  "EditorUiAlias": "Umb.PropertyEditorUi.EyeDropper",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {},
+  "Udi": "umb://data-type/6e26bb55a635478b8efdc771775693c1",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

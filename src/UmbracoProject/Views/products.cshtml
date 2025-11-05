@@ -1,0 +1,24 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Products>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper umbracoHelper
+@{
+    Layout = "BasicNav.cshtml";
+}
+<section id="blog" class="bg-grey">
+    <div class="container">
+        <div class="section-content">
+            <div class="title-wrap mb-5">
+                <h2 class="section-title">@umbracoHelper.GetDictionaryValue("OurProducts")</h2>
+                <p class="section-sub-title">@umbracoHelper.GetDictionaryValue("DescProducts")</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 blog-holder">
+                    <div class="row">
+                        @await Html.PartialAsync("ProductListing")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

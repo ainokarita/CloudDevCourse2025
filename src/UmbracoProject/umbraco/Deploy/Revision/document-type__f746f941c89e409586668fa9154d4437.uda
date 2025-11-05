@@ -1,0 +1,83 @@
+{
+  "Name": "Product",
+  "Alias": "product",
+  "DefaultTemplate": "umb://template/bb6a269dca344077a1b55d6ffb60a459",
+  "AllowedTemplates": [
+    "umb://template/bb6a269dca344077a1b55d6ffb60a459"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-wine-glass",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [
+    "umb://document-type/1e49f665578a45418762ea2a69f90dcc"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "0c9a743f-fbbb-43a7-b1b6-13749f8ba7c9",
+      "Name": "Product details",
+      "Alias": "fields/productDetails",
+      "PropertyTypes": [
+        {
+          "Key": "0ce39186-13da-44a5-995b-ccb288286467",
+          "Alias": "description",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Name": "Description",
+          "SortOrder": 2,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "29c56d40-d937-40ea-a1a3-1126685614db",
+          "Alias": "price",
+          "DataType": "umb://data-type/1405253f929f4b73972c32545fb091af",
+          "Name": "Price",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "3b16086e-ad17-4a61-8f55-76c89b2a9452",
+          "Alias": "images",
+          "DataType": "umb://data-type/0e63d883b62b479988c3157f82e83ecc",
+          "Name": "Image(s)",
+          "SortOrder": 1
+        }
+      ]
+    },
+    {
+      "Key": "31749146-fa88-48d3-a781-a6a4da1d8c3e",
+      "Name": "Fields",
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": []
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/f746f941c89e409586668fa9154d4437",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0e63d883b62b479988c3157f82e83ecc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/1405253f929f4b73972c32545fb091af",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/bb6a269dca344077a1b55d6ffb60a459",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

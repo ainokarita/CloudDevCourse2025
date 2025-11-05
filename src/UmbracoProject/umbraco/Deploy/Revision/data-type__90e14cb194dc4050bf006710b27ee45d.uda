@@ -1,0 +1,171 @@
+{
+  "Name": "Block Grid Text Page - Body Text - Block Grid Property Editor UI",
+  "EditorAlias": "Umbraco.BlockGrid",
+  "EditorUiAlias": "Umb.PropertyEditorUi.BlockGrid",
+  "Configuration": {
+    "gridColumns": 12,
+    "blockGroups": [
+      {
+        "name": "Demo Blocks",
+        "key": "a309391e-5329-42d6-ad17-329cdd26bd2f"
+      }
+    ],
+    "blocks": [
+      {
+        "contentElementTypeKey": "c6a70b73-f74b-42cc-8d00-0733c8e18164",
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "groupKey": "a309391e-5329-42d6-ad17-329cdd26bd2f",
+        "columnSpanOptions": [
+          {
+            "columnSpan": 1
+          },
+          {
+            "columnSpan": 2
+          },
+          {
+            "columnSpan": 3
+          },
+          {
+            "columnSpan": 4
+          },
+          {
+            "columnSpan": 5
+          },
+          {
+            "columnSpan": 6
+          },
+          {
+            "columnSpan": 7
+          },
+          {
+            "columnSpan": 8
+          },
+          {
+            "columnSpan": 9
+          },
+          {
+            "columnSpan": 12
+          },
+          {
+            "columnSpan": 11
+          },
+          {
+            "columnSpan": 10
+          }
+        ],
+        "label": "{=headline}",
+        "rowMinSpan": 1,
+        "rowMaxSpan": 2
+      },
+      {
+        "contentElementTypeKey": "61602bb4-a965-41ea-8949-9049c6eb1836",
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "groupKey": "a309391e-5329-42d6-ad17-329cdd26bd2f",
+        "columnSpanOptions": [
+          {
+            "columnSpan": 1
+          },
+          {
+            "columnSpan": 4
+          },
+          {
+            "columnSpan": 3
+          },
+          {
+            "columnSpan": 2
+          },
+          {
+            "columnSpan": 5
+          },
+          {
+            "columnSpan": 6
+          },
+          {
+            "columnSpan": 7
+          },
+          {
+            "columnSpan": 8
+          },
+          {
+            "columnSpan": 9
+          },
+          {
+            "columnSpan": 10
+          },
+          {
+            "columnSpan": 11
+          },
+          {
+            "columnSpan": 12
+          }
+        ],
+        "rowMinSpan": 1,
+        "rowMaxSpan": 2,
+        "label": ""
+      },
+      {
+        "contentElementTypeKey": "82f52042-11e6-4314-b0ec-60cf78543173",
+        "allowAtRoot": true,
+        "allowInAreas": true,
+        "groupKey": "a309391e-5329-42d6-ad17-329cdd26bd2f",
+        "columnSpanOptions": [
+          {
+            "columnSpan": 1
+          },
+          {
+            "columnSpan": 2
+          },
+          {
+            "columnSpan": 3
+          },
+          {
+            "columnSpan": 4
+          },
+          {
+            "columnSpan": 5
+          },
+          {
+            "columnSpan": 6
+          },
+          {
+            "columnSpan": 7
+          },
+          {
+            "columnSpan": 8
+          },
+          {
+            "columnSpan": 9
+          },
+          {
+            "columnSpan": 10
+          },
+          {
+            "columnSpan": 11
+          },
+          {
+            "columnSpan": 12
+          }
+        ],
+        "label": "",
+        "rowMinSpan": 1,
+        "rowMaxSpan": 2
+      }
+    ]
+  },
+  "Udi": "umb://data-type/90e14cb194dc4050bf006710b27ee45d",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/61602bb4a96541ea89499049c6eb1836"
+    },
+    {
+      "Udi": "umb://document-type/82f5204211e64314b0ec60cf78543173"
+    },
+    {
+      "Udi": "umb://document-type/c6a70b73f74b42cc8d000733c8e18164"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

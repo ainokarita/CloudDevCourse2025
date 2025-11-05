@@ -1,0 +1,25 @@
+{
+  "Name": "Membership",
+  "Alias": "membership",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/e06c81019d59476c9d90adbae279eb18",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

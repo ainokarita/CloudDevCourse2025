@@ -1,0 +1,25 @@
+{
+  "Name": "Image Cropper",
+  "EditorAlias": "Umbraco.ImageCropper",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ImageCropper",
+  "Configuration": {
+    "crops": [
+      {
+        "label": "Header",
+        "alias": "header",
+        "width": 1920,
+        "height": 800
+      },
+      {
+        "label": "Portrait",
+        "alias": "portrait",
+        "width": 350,
+        "height": 350
+      }
+    ]
+  },
+  "Udi": "umb://data-type/1df9f033e6d4451fb8d2e0cbc50a836f",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

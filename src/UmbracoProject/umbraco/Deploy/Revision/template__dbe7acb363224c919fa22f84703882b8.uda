@@ -1,0 +1,21 @@
+{
+  "Name": "Products",
+  "Alias": "Products",
+  "File": "umb://template-file/Products.cshtml",
+  "Master": "umb://template/3c923e98edcf42839a870a51e497326f",
+  "Udi": "umb://template/dbe7acb363224c919fa22f84703882b8",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Products.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/3c923e98edcf42839a870a51e497326f",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "16.0.4"
+}

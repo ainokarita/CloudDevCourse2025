@@ -1,0 +1,7 @@
+﻿@using Umbraco.Extensions
+@using Umbraco.Forms.Web;
+@using Umbraco.Forms.Web.Extensions;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.RichTextBlockItem>
+
+@await Component.InvokeAsync("RenderForm", new { formId = @Model.Content.Value("Form"),includeScripts = true })
+@Html.RenderUmbracoFormDependencies(Url)

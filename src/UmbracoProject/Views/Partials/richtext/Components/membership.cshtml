@@ -1,0 +1,79 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<
+    Umbraco.Cms.Core.Models.Blocks.RichTextBlockItem<
+        Umbraco.Cms.Web.Common.PublishedModels.Membership,
+        Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement
+    >
+>
+
+@using Microsoft.AspNetCore.Http.Extensions
+@using Umbraco.Cms.Web.Common.Models
+@using Umbraco.Cms.Web.Website.Controllers
+@using Umbraco.Extensions
+
+@{
+    var isLoggedIn = Context.User.GetMemberIdentity()?.IsAuthenticated ?? false;
+    var logoutModel = new PostRedirectModel
+    {
+        RedirectUrl = null
+    };
+}
+
+@if (isLoggedIn)
+{
+    <div class="login-status">
+        <p>Welcome back <strong>@Context.User?.GetMemberIdentity()?.Name</strong>!</p>
+
+        @using (Html.BeginUmbracoForm<UmbLoginStatusController>("HandleLogout", new { RedirectUrl = logoutModel.RedirectUrl }))
+        {
+            <button type="submit" class="btn btn-primary">Log out</button>
+        }
+    </div>
+}
+else
+{
+    <div id="registration-login-wrapper">
+    <div id="registration-section">
+        <h2>Sign up</h2>
+        @await Html.PartialAsync("partials/register", model: null)
+
+        <p class="mt-3">
+            Already have an account? 
+            <a href="#" id="show-login-link">Log in</a>
+        </p>
+    </div>
+
+    <div id="login-section" style="display: none;">
+        <h2>Log in</h2>
+        @await Html.PartialAsync("partials/login", model: null)
+
+        <p class="mt-3">
+            Don't have an account? 
+            <a href="#" id="show-register-link">Sign up</a>
+        </p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const showLoginLink = document.getElementById("show-login-link");
+        const showRegisterLink = document.getElementById("show-register-link");
+        const loginSection = document.getElementById("login-section");
+        const registrationSection = document.getElementById("registration-section");
+
+        if (showLoginLink && showRegisterLink && loginSection && registrationSection) {
+            showLoginLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                loginSection.style.display = "block";
+                registrationSection.style.display = "none";
+            });
+
+            showRegisterLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                loginSection.style.display = "none";
+                registrationSection.style.display = "block";
+            });
+        }
+    });
+</script>
+
+}

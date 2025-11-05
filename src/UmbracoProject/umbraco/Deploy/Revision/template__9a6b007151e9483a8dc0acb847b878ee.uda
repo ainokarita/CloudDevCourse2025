@@ -1,0 +1,21 @@
+{
+  "Name": "Community",
+  "Alias": "Community",
+  "File": "umb://template-file/Community.cshtml",
+  "Master": "umb://template/3c923e98edcf42839a870a51e497326f",
+  "Udi": "umb://template/9a6b007151e9483a8dc0acb847b878ee",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Community.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/3c923e98edcf42839a870a51e497326f",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,37 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    string cssCurrent = "nav-current";
+}
+@foreach (var child in Model.AncestorOrSelf(2).Children)
+{
+    var grandchildren = child.Children().ToArray();
+    <li>
+        @if (Model.Name == child.Name)
+        {
+            <h6 class="uppercase"><a class="@cssCurrent" href="@child.Url()">@child.Name</a></h6>
+        }
+        else
+        {
+            <h6 class="uppercase"><a href="@child.Url()">@child.Name</a></h6>
+        }
+        @if (grandchildren.Length > 0)
+        {
+            <ul>
+                @foreach (var grandchild in grandchildren)
+                {
+                    <li>
+                        @if (Model.Name == grandchild.Name)
+                        {
+                            <h6 class="uppercase"><a class="@cssCurrent" href="@grandchild.Url()">@grandchild.Name</a></h6>
+                        }
+                        else
+                        {
+                            <h6 class="uppercase"><a href="@grandchild.Url()">@grandchild.Name</a></h6>
+                        }
+                    </li>
+                }
+            </ul>
+        }
+
+    </li>
+}

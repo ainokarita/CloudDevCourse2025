@@ -1,0 +1,65 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Community>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper umbracoHelper
+@{
+    Layout = "basicNav.cshtml";
+    var communityMembers = Model.Children();
+    var missing = "style=\"color:lightgrey\"";
+}
+<section class="bg-grey">
+    <div class="container">
+        <div class="section-content">
+            <div class="title-wrap mb-5 aos-init">
+                <h2 class="section-title">@umbracoHelper.GetDictionaryValue("Community")</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12 blog-holder">
+                    <div class="row">
+                        @foreach (var person in communityMembers)
+                        {
+                            var personImage = person.Value<IPublishedContent>("image");
+                            <div class="col-md-4 blog-item-wrapper">
+                                <div class="blog-item">
+                                    <div class="blog-img">
+                                        <a href="@person.Url(Model.GetCultureFromDomains())">
+                                            @if (personImage != null)
+                                            {
+                                                <img src="@personImage.Url()?width=400" alt="">
+                                            }
+                                            else
+                                            {
+                                                <img src="https://placehold.co/400x250" alt="">
+                                            }
+                                        </a>
+                                    </div>
+                                    <div class="blog-text">
+                                        <div class="blog-title">
+                                            <a href="@person.Url(Model.GetCultureFromDomains())"><h4>@person.Name</h4></a>
+                                        </div>
+                                        <div class="blog-desc">
+                                            <p></p>
+                                        </div>
+                                        <div class="blog-share-wrapper">
+                                            <a class="blog-share" @if(person.Value<string>("githubProfile")==""){
+                                           @Html.Raw(missing)
+                                           } target="_blank" href='https://github.com/@person.Value("githubProfile")'>
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a class="blog-share" @if(person.Value<string>("twitterHandle")==""){
+                                           @Html.Raw(missing)
+                                           } target="_blank" href='https://www.twitter.com/@person.Value("twitterHandle")'>
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <hr />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

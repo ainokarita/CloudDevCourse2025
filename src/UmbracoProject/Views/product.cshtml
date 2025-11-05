@@ -1,0 +1,53 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Product>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "basicNav.cshtml";
+    string defaultCurrency = Model.Parent.Value<string>("defaultCurrency");
+}
+<section id="single-content" class="bg-white">
+    <div class="container">
+        <div class="section-content">
+
+            <div class="row align-items-center">
+                <div class="col-md-4 mt-4">
+                    @if (Model.Images != null)
+                    {
+                        foreach (var image in Model.Images)
+                        {
+                            <figure>
+                                <a href="@image.Url()" data-rel="lightcase"><img src="@image.Url()?width=480&height=240" alt="" /></a>
+                            </figure>
+                        }
+                    }
+                    else
+                    {
+                        <img src="https://placehold.co/480x560" alt="">
+                    }
+                </div>
+                <div class="col-md-6 mt-4 align-self-start offset-md-1">
+                    <h4>
+                        <span class="product-price-text"><i class="fa fa-coins"></i></span> @if (Model.Value<int>("price") == 0)
+                        {
+                            <span>FREE</span>
+                        }
+                        else
+                        {
+                            <span> @String.Format("{0:N2}", Model.Value("price")) @defaultCurrency </span>
+                        }
+                    </h4>
+                    @Model.Description
+                    @if (Model.Name() != "Umbraco CMS")
+                    {
+                        <div style="float:right;">
+                            <button type="button" class="btn btn-outline-primary" disabled="disabled">OUT OF STOCK</button>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

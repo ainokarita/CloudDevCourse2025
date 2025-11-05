@@ -1,0 +1,40 @@
+{
+  "Name": "Search Page",
+  "Alias": "searchPage",
+  "DefaultTemplate": "umb://template/7c4b506f05f74e83a95fd11b5b994b47",
+  "AllowedTemplates": [
+    "umb://template/7c4b506f05f74e83a95fd11b5b994b47"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-search",
+  "Thumbnail": "folder.png",
+  "Description": "A Search Page. Please only use one.",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [
+    "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+    "umb://document-type/bb2974c6a60140259da817bb459099ca"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/29e5e38e4bac4a54bfe9bc5fe44b2169",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/bb2974c6a60140259da817bb459099ca",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/7c4b506f05f74e83a95fd11b5b994b47",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

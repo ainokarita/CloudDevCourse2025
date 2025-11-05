@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    IPublishedContent background = Model.Value<IPublishedContent>("backgroundImage");
+    string backgroundStyle = "";
+    string cropAlias = "Header";
+    if (background != null)
+    {
+        backgroundStyle = "style=\"background-image: url(" + Url.GetCropUrl(background, cropAlias) + "\"";
+    }
+    if (Model is ContentModels.Product && Model.Value<IPublishedContent>("image") != null)
+    {
+        background = Model.Value<IPublishedContent>("image");
+        backgroundStyle = "style=\"background-image: url(" + Url.GetCropUrl(background, cropAlias) + "\"";
+    }
+}
+
+<div class="jumbotron jumbotron-small jumbotron-single d-flex align-items-center" @Html.Raw(@backgroundStyle)>
+    <div class="container text-center">
+        <h1 class="display-2 mb-4">@Model.Name</h1>
+    </div>
+</div>

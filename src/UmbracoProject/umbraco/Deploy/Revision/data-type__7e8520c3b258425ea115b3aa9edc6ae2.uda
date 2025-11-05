@@ -1,0 +1,19 @@
+{
+  "Name": "Home Page - Highlighted Products",
+  "EditorAlias": "Umbraco.MultiNodeTreePicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.ContentPicker",
+  "Configuration": {
+    "minNumber": 0,
+    "maxNumber": 6,
+    "filter": "f746f941-c89e-4095-8666-8fa9154d4437"
+  },
+  "Udi": "umb://data-type/7e8520c3b258425ea115b3aa9edc6ae2",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/f746f941c89e409586668fa9154d4437",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Search Page",
+  "Alias": "SearchPage",
+  "File": "umb://template-file/SearchPage.cshtml",
+  "Master": "umb://template/3c923e98edcf42839a870a51e497326f",
+  "Udi": "umb://template/7c4b506f05f74e83a95fd11b5b994b47",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/SearchPage.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/3c923e98edcf42839a870a51e497326f",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "16.0.4"
+}

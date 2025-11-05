@@ -1,0 +1,43 @@
+{
+  "Name": "Form",
+  "Alias": "formBlock",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "ad8e2a67-919c-41f8-84c3-b1472f2e251c",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "95693091-2b36-4d02-9962-df3f9dec079c",
+          "Alias": "form",
+          "DataType": "umb://data-type/bd06d910a266421ab17580f942509af9",
+          "Name": "Form"
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/61c7198731b54facbb3a8b4b9b4e11e2",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/bd06d910a266421ab17580f942509af9",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

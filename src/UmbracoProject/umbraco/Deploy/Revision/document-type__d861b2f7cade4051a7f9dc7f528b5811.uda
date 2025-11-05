@@ -1,0 +1,85 @@
+{
+  "Name": "Products",
+  "Alias": "products",
+  "DefaultTemplate": "umb://template/dbe7acb363224c919fa22f84703882b8",
+  "AllowedTemplates": [
+    "umb://template/dbe7acb363224c919fa22f84703882b8"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-shopping-basket",
+  "Thumbnail": "folder.png",
+  "Description": "A container for product items.",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/f746f941c89e409586668fa9154d4437"
+    ]
+  },
+  "CompositionContentTypes": [
+    "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+    "umb://document-type/bb2974c6a60140259da817bb459099ca"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "1130db19-f2ae-4257-8b5a-7ffe78b4e2bc",
+      "Name": "Fields",
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "34f75453-68fb-46a4-a3b9-6510e8d817c4",
+      "Name": "Shop",
+      "Alias": "fields/shop",
+      "PropertyTypes": [
+        {
+          "Key": "55a04a0f-a218-4766-ab1f-e798c5915bbf",
+          "Alias": "defaultCurrency",
+          "DataType": "umb://data-type/9ae7afb1c24c45a9b8fdf8bca4e4ef96",
+          "Name": "Default Currency",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "f6c427f4-dd2a-4445-ab75-aaaab192b57f",
+          "Alias": "featuredProduct",
+          "DataType": "umb://data-type/c7e4c04ae622440c92baef6b9b9246e6",
+          "Description": "Select a product to be featured on top of the page.",
+          "Name": "Featured product",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d861b2f7cade4051a7f9dc7f528b5811",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/9ae7afb1c24c45a9b8fdf8bca4e4ef96",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c7e4c04ae622440c92baef6b9b9246e6",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/bb2974c6a60140259da817bb459099ca",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/f746f941c89e409586668fa9154d4437",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/dbe7acb363224c919fa22f84703882b8",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

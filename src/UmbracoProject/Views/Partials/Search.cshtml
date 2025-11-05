@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    IPublishedContent searchPage = Model.Root().FirstChild<SearchPage>();
+}
+@if (searchPage != null)
+{
+    <div id="side-search" class="sidenav">
+        <a href="javascript:void(0)" id="side-search-close">&times;</a>
+        <div class="sidenav-content">
+            <form action="@searchPage.Url()">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search" id="query" name="query">
+                    <div class="input-group-append">
+                        <button style="border-radius:initial" class="btn btn-primary lnr lnr-magnifier"></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+}

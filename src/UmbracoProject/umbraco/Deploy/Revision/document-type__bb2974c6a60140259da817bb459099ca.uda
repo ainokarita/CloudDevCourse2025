@@ -1,0 +1,65 @@
+{
+  "Name": "Background Header Image",
+  "Alias": "backgroundHeaderImage",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "a3ea6fa2-1122-419d-a1e8-294acaf13e5c",
+      "Name": "Settings",
+      "SortOrder": 10,
+      "Type": 1,
+      "Alias": "settings",
+      "PropertyTypes": [
+        {
+          "Key": "2cd02ef0-7bc4-4fa1-9e69-31071832c56d",
+          "Alias": "umbracoNaviHide",
+          "DataType": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+          "Description": "Hide this page from navigation menu on the website.",
+          "Name": "UmbracoNaviHide"
+        }
+      ]
+    },
+    {
+      "Key": "fd0bb402-827d-4ed0-9488-105d0f9db197",
+      "Name": "Styling",
+      "Alias": "settings/styling",
+      "PropertyTypes": [
+        {
+          "Key": "28278732-663e-4c86-ad87-e493e6f3eea9",
+          "Alias": "backgroundImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Background Header ",
+          "VariesByCulture": true
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/bb2974c6a60140259da817bb459099ca",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/92897bc6a5f34ffeae27f2e7e33dda49",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

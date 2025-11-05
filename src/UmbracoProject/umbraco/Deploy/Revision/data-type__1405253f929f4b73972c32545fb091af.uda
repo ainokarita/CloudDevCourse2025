@@ -1,0 +1,15 @@
+{
+  "Name": "Product - Price - Decimal Property Editor UI",
+  "EditorAlias": "Umbraco.Decimal",
+  "EditorUiAlias": "Umb.PropertyEditorUi.Decimal",
+  "DatabaseType": "Decimal",
+  "Configuration": {
+    "step": "0.01",
+    "min": 0,
+    "max": 100000
+  },
+  "Udi": "umb://data-type/1405253f929f4b73972c32545fb091af",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

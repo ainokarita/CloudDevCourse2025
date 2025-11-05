@@ -1,0 +1,18 @@
+{
+  "Name": "Products - Featured product - Document Picker Property Editor UI",
+  "EditorAlias": "Umbraco.ContentPicker",
+  "EditorUiAlias": "Umb.PropertyEditorUi.DocumentPicker",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "startNodeId": "c54155a0-500a-4846-b6f7-c9c791832995"
+  },
+  "Udi": "umb://data-type/c7e4c04ae622440c92baef6b9b9246e6",
+  "Dependencies": [
+    {
+      "Udi": "umb://document/c54155a0500a4846b6f7c9c791832995",
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

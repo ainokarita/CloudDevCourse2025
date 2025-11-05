@@ -1,0 +1,70 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var productsPage = Model.Root().FirstChild<Products>();
+    string defaultCurrency = productsPage.DefaultCurrency;
+    var featuredItem = productsPage.FeaturedProduct;
+    string featured = "";
+    var products = Model.Value<IEnumerable<IPublishedContent>>("highlightedProducts");
+    if (products == null)
+    {
+        products = productsPage.Children().ToList();
+    }
+}
+@foreach (var item in products)
+{
+    if (featuredItem != null && item.Id == featuredItem.Id) { featured = "featured"; };
+    string firstSentence = "";
+    if (item.Value("description").ToString().Length > 15)
+    {
+        firstSentence = item.Value("description").ToString().Substring(0, item.Value("description").ToString().IndexOf(".") + 1);
+    }
+    <div class="col-md-4 blog-item-wrapper">
+        <div class="blog-item @featured">
+            <div class="blog-img">
+                @{
+                    var images = item.Value<IEnumerable<IPublishedContent>>("images");
+                    @if (images.Any())
+                    {
+                        <a href="@item.Url()"><img src="@images.FirstOrDefault().Url()?width=400&height=250" alt=""></a>
+                    }
+                    else
+                    {
+                        <a href="@item.Url()"><img src="https://placehold.co/400x250" alt=""></a>
+                    }
+                }
+            </div>
+            <div class="blog-text">
+                <div class="blog-title">
+                    <a href="@item.Url()"><h4>@item.Name</h4></a>  @if (featuredItem != null && item.Name.ToString() == featuredItem.Name().ToString())
+                    {
+                        <p class="featured-text">Featured item</p>
+                    }
+                </div>
+                <div class="blog-desc">
+                    
+                    @Html.Raw(firstSentence)
+                </div>
+
+                <div class="blog-price">
+                    @if (item.Value<int>("price") == 0)
+                    {
+                        <p>FREE</p>
+                    }
+                    else
+                    {
+                        <p> @String.Format("{0:N2}", item.Value("price")) @defaultCurrency </p>
+                    }
+                    @*String.Format("{0:C2}" could take currency from culture*@
+                </div>
+                @if (@item.Name != "Umbraco CMS")
+                {
+                    <div style="display:inline-block" class="blog-share-wrapper">
+                        <button type="button" class="btn btn-outline-primary" disabled="disabled">OUT OF STOCK</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <!-- clear featured so it does not repeat -->
+    featured = "";
+}

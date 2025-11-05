@@ -1,0 +1,65 @@
+{
+  "Name": "Footer Banner",
+  "Alias": "footerBanner",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-plugin",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "156632bc-ae61-4e00-a82d-575f5165436b",
+      "Name": "Fields",
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "eacd413d-6432-4f2e-87af-a704b1da490c",
+      "Name": "Banner (bottom of the page)",
+      "SortOrder": 90,
+      "Alias": "fields/banner(bottomOfThePage)",
+      "PropertyTypes": [
+        {
+          "Key": "5d80dcf4-ffa7-420a-ba51-e01c0718d8c6",
+          "Alias": "bannerHeader",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Banner Header",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "9a946185-d342-47a4-8d21-166a8014bc44",
+          "Alias": "bannerBody",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Banner Body",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/d3120f70696b40d48b3561591a1f0129",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

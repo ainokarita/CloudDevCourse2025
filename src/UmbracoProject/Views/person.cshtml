@@ -1,0 +1,30 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Person>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper umbracoHelper
+@{
+    Layout = "basicNav.cshtml";
+}
+
+<div class="section-content blog-content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                @if (Model.Image != null)
+                {
+                    <img src="@Model.Image.Url()?width=400&height=400" alt="">
+                }
+            </div>
+            <div class="col-md-8">
+                <p>
+                    @umbracoHelper.GetDictionaryValue("DescCommunity")
+                </p>
+                <hr />
+                @if (Model.GithubProfile != "")
+                {
+                    <h6 class="uppercase"><a style="text-decoration:none" target="_blank" href="https://www.github.com/@Model.GithubProfile"><i class="fab fa-github"></i> @Model.GithubProfile on GitHub</a></h6>
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,304 @@
+{
+  "Name": "Home Page",
+  "Alias": "homePage",
+  "DefaultTemplate": "umb://template/b0ee83792ab84f4f8b0bd3a1fb92cda5",
+  "AllowedTemplates": [
+    "umb://template/b0ee83792ab84f4f8b0bd3a1fb92cda5"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-home",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedAtRoot": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/ff74556a73554a8b83cb42dd341a8ca7",
+      "umb://document-type/84f9277a3dbe4ba4a5025c40d4ce068d",
+      "umb://document-type/d861b2f7cade4051a7f9dc7f528b5811",
+      "umb://document-type/29e5e38e4bac4a54bfe9bc5fe44b2169",
+      "umb://document-type/0294075eaf994e85a055fd33a1c865f7",
+      "umb://document-type/483d9776f80b4ac5959deb61d45d949b",
+      "umb://document-type/a179a6d70aa947458ab5c2b4c5a2fc48"
+    ]
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "1b5e11fe-0fa2-48f4-96ca-b67f569c13eb",
+      "Name": "Styling",
+      "Alias": "settings/styling",
+      "PropertyTypes": [
+        {
+          "Key": "3fdc14a5-e293-4608-849c-ab197f55e350",
+          "Alias": "colorSettingsGradientEnd",
+          "DataType": "umb://data-type/d20ceb600f9d46ce98060cff52fe80e0",
+          "Name": "Color Settings - Gradient End",
+          "SortOrder": 5,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "489c8918-1ece-4ad5-b9d8-bc4810519e39",
+          "Alias": "companyLogos",
+          "DataType": "umb://data-type/0e63d883b62b479988c3157f82e83ecc",
+          "Description": "Use this to select partner companies icon on the scrolling bar. If empty defaults to the Umbraco logo.",
+          "Name": "Company Logos",
+          "SortOrder": 3,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "6ad83276-a950-4325-9077-4bb0d8b2a0a2",
+          "Alias": "backgroundImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Description": "Main header background.",
+          "Name": "Background Image",
+          "VariesByCulture": true
+        },
+        {
+          "Key": "91e6b32e-815b-4523-91d9-23fcc676cbeb",
+          "Alias": "colorSettingsAccent1",
+          "DataType": "umb://data-type/6d7529c987c8482597b8b7c06434a3e9",
+          "Name": "Color Settings - Accent 1",
+          "SortOrder": 6,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "96fc7fd4-d74e-4dca-b648-0476bb81228f",
+          "Alias": "umbracoLogos",
+          "DataType": "umb://data-type/1b661f4022424b44b9cb3990ee2b13c0",
+          "Description": "Small icons on the header background. Recommended to pick 2.",
+          "Name": "Umbraco Logos",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "e2986ef2-ca48-4f16-a2c7-a21aef2d0a11",
+          "Alias": "colorSettingsGradientStart",
+          "DataType": "umb://data-type/6e26bb55a635478b8efdc771775693c1",
+          "Name": "Color Settings - Gradient Start",
+          "SortOrder": 4,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "ec1cbdd5-3375-45a7-9a7d-aa36cf17f3a3",
+          "Alias": "minorFeaturesBackgroundImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Description": "Used as a background on the colored section separators.",
+          "Name": "Minor Features",
+          "SortOrder": 2,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "f2878080-5c2d-4749-98b1-d27681ac7a83",
+          "Alias": "colorSettingsAccent2",
+          "DataType": "umb://data-type/feb44f4e84cf41a19b9a66db908eb6df",
+          "Name": "Color Settings - Accent 2",
+          "SortOrder": 7,
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "45077dcc-67d9-460f-b294-a5e8dec6b0c3",
+      "Name": "Products spotlight",
+      "SortOrder": 1,
+      "Alias": "fields/productsSpotlight",
+      "PropertyTypes": [
+        {
+          "Key": "cce9e00b-51a6-48f2-81ca-1572757f3ed0",
+          "Alias": "highlightedProducts",
+          "DataType": "umb://data-type/7e8520c3b258425ea115b3aa9edc6ae2",
+          "Name": "Highlighted Products",
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "90cca272-dde5-42b6-893a-3560d5a87d34",
+      "Name": "Fields",
+      "SortOrder": 1,
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "9c1836fd-0ae8-4b5f-a03c-e06998b2657f",
+      "Name": "Testamonials",
+      "SortOrder": 12,
+      "Alias": "fields/testamonials",
+      "PropertyTypes": [
+        {
+          "Key": "9c0d7e22-06b1-42e4-8442-bb8b54eb8a7b",
+          "Alias": "testimonials",
+          "DataType": "umb://data-type/1254a66b3a404e539299e5c3e0482811",
+          "Name": "Testimonials",
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "9db82a33-12e9-4c91-ae99-ccdf1d7f91c5",
+      "Name": "Footer",
+      "SortOrder": 14,
+      "Alias": "fields/footer",
+      "PropertyTypes": [
+        {
+          "Key": "0a8ffe16-df47-4b3d-9bcc-3ddb50caf367",
+          "Alias": "companyPhone",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Company Phone",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "3f616617-eeb4-409b-a8fb-21585b063651",
+          "Alias": "companyAddress",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Company Address",
+          "VariesByCulture": true
+        }
+      ]
+    },
+    {
+      "Key": "b367e54e-c935-4941-9d7a-aae07df17a52",
+      "Name": "Header",
+      "Alias": "fields/header",
+      "PropertyTypes": [
+        {
+          "Key": "cd08e91f-f1ef-4365-9f20-5e58ec2d6363",
+          "Alias": "highlightText",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "The large text in the middle of the header.",
+          "Name": "Highlight Text",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "e34f085a-eea3-458e-91b0-47909801c466",
+          "Alias": "companyName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "On the top-left of the page.",
+          "Name": "Company Name"
+        }
+      ]
+    },
+    {
+      "Key": "cd1602e3-ead1-4b69-91b4-9e80621cbeeb",
+      "Name": "Site owner",
+      "SortOrder": 10,
+      "Alias": "fields/siteOwner",
+      "PropertyTypes": [
+        {
+          "Key": "16900abc-0d20-4b8e-bfe3-4ce18eb64fb3",
+          "Alias": "yourDescription",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "A bit about yourself, maybe?",
+          "Name": "Your Description",
+          "SortOrder": 1,
+          "VariesByCulture": true
+        },
+        {
+          "Key": "48875a7c-e0eb-4947-9b6d-c1a6ff4f31e0",
+          "Alias": "yourBeautifulFace",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Description": "Upload a picture to show the world how great you look!",
+          "Name": "Your Beautiful Face",
+          "SortOrder": 2
+        },
+        {
+          "Key": "5e49438c-1e62-4d77-9032-d2eefd6709fb",
+          "Alias": "yourName",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "Your name, for posterity.",
+          "Name": "Your Name"
+        }
+      ]
+    },
+    {
+      "Key": "e859779f-df83-40da-bf5f-51836e345de1",
+      "Name": "Settings",
+      "SortOrder": 2,
+      "Type": 1,
+      "Alias": "settings",
+      "PropertyTypes": []
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/028668c9fa584f408dedded831e88675",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/0e63d883b62b479988c3157f82e83ecc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/1254a66b3a404e539299e5c3e0482811",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/1b661f4022424b44b9cb3990ee2b13c0",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/6d7529c987c8482597b8b7c06434a3e9",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/6e26bb55a635478b8efdc771775693c1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/7e8520c3b258425ea115b3aa9edc6ae2",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/d20ceb600f9d46ce98060cff52fe80e0",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/feb44f4e84cf41a19b9a66db908eb6df",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/0294075eaf994e85a055fd33a1c865f7",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/29e5e38e4bac4a54bfe9bc5fe44b2169",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/483d9776f80b4ac5959deb61d45d949b",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/84f9277a3dbe4ba4a5025c40d4ce068d",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/a179a6d70aa947458ab5c2b4c5a2fc48",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/d861b2f7cade4051a7f9dc7f528b5811",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/ff74556a73554a8b83cb42dd341a8ca7",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/b0ee83792ab84f4f8b0bd3a1fb92cda5",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

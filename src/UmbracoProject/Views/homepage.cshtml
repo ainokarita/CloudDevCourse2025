@@ -1,0 +1,314 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models.Blocks;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inject Umbraco.Cms.Web.Common.UmbracoHelper umbracoHelper
+@{
+    Layout = "master.cshtml";
+    IPublishedContent root = Model.Root();
+    IPublishedContent productsPage = root.Children<Products>().FirstOrDefault();
+    string defaultCurrency = "";
+    if (productsPage != null) { defaultCurrency = productsPage.Value<string>("defaultCurrency"); };
+    var typedMultiNodeTreePicker = root.Value<IEnumerable<IPublishedContent>>("highlightedProducts");
+    var featurettesBackground = root.Value<IPublishedContent>("minorFeaturesBackgroundImage");
+    var mainBackground = Model.Value<IPublishedContent>("backgroundImage");
+    string backgroundStyle = "";
+    string mainBackgroundStyle = "";
+    if (featurettesBackground != null)
+    {
+        backgroundStyle = "style=\"background-image: url(" + featurettesBackground.Url() + "?width=1920)\"";
+    }
+    if (mainBackground != null)
+    {
+        mainBackgroundStyle = "style=\"background-image: url(" + mainBackground.Url() + "?width=1920)\"";
+    }
+}
+
+
+<div class="jumbotron d-flex align-items-center" @Html.Raw(mainBackgroundStyle)>
+    <div class="container text-center">
+        <h1 class="display-1 mb-4">
+            @if (Model.Value<string>("highlightText") != "")
+            {
+                @Html.Raw(Model.Value<string>("highlightText").Replace(" ", " <br />"))
+            }
+            else
+            {
+                <span>Umbraco <br /> Training</span>
+            }
+        </h1>
+
+    </div>
+    @if (Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos") != null && Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").Any())
+    {
+        var imgLogo1 = Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").FirstOrDefault();
+        var imgLogo2 = Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").Last();
+        <div class="rectangle-1"><img src="@imgLogo1.Url()" /></div>
+        <div class="rectangle-2"><img src="@imgLogo1.Url()" /></div>
+        <div class="rectangle-transparent-1"><img src="@imgLogo1.Url()" /></div>
+        <div class="rectangle-transparent-2"><img src="@imgLogo1.Url()" /></div>
+        <div class="circle-1"><img src="@imgLogo2.Url()" /></div>
+        <div class="circle-2"><img src="@imgLogo2.Url()" /></div>
+        <div class="circle-3"><img src="@imgLogo2.Url()" /></div>
+        <div class="triangle triangle-1"><img src="@imgLogo1.Url()" /></div>
+        <div class="triangle triangle-2"><img src="@imgLogo1.Url()" /></div>
+        <div class="triangle triangle-3"><img src="@imgLogo1.Url()" /></div>
+        <div class="triangle triangle-4"><img src="@imgLogo1.Url()" /></div>
+    }
+</div>
+<!-- Features Section-->
+<section id="features" class="bg-white">
+    <div class="container">
+        <div class="section-content">
+            <!-- Section Title -->
+            <div class="title-wrap mb-5">
+                <h2 class="section-title">
+                    @umbracoHelper.GetDictionaryValue("WelcomeToCourses")
+                </h2>
+                <p class="section-sub-title">@umbracoHelper.GetDictionaryValue("WhatWillItBe") </p>
+            </div>
+            <!-- End of Section Title -->
+            <div class="row">
+                <!-- Features Holder-->
+                <div class="col-md-10 offset-md-1 features-holder">
+                    <div class="row align-items-stretch align-content-stretch">
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/umbraco-fundamentals/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-laptop fs-40"></i>
+                                    </div>
+                                    <h4>Fundamentals</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescFundamentals")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/extending-the-backoffice/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-exit-up fs-40"></i>
+                                    </div>
+                                    <h4>Extending the Backoffice</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescExtending")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/umbraco-and-mvc/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-cog fs-40"></i>
+                                    </div>
+                                    <h4>MVC</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescMVC")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/application-integration/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-enter fs-40"></i>
+                                    </div>
+                                    <h4>Application Integration</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescAppInt")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/application-integration/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-lock fs-40"></i>
+                                    </div>
+                                    <h4>Security</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescSecurity")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->                        
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/searching-and-indexing/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-map fs-40"></i>
+                                    </div>
+                                    <h4>Searching and Indexing</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescSearch")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->
+                        <!-- Features Item -->
+                        <div class="col-md-4 col-sm-12  text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/cloud-developer/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-cloud fs-40"></i>
+                                    </div>
+
+                                    <h4>Cloud Developer</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescCloudDev")</p>
+                                </a>
+                            </div>
+                        <!-- Features Item -->
+                        </div>
+                        <div class="col-md-4 col-sm-12 text-center">
+                            <div class="shadow rounded  feature-item p-4 mb-4">
+                                <a href="https://umbraco.com/training/course-details/load-balancing-and-azure/" target="_blank">
+                                    <div class="my-4">
+                                        <i class="lnr lnr-layers fs-40"></i>
+                                    </div>
+                                    <h4>Load Balancing</h4>
+                                    <p>@umbracoHelper.GetDictionaryValue("DescLoad")</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End of Feature Item -->                        
+                    </div>
+                </div>
+                <!-- End of Features Holder-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End of Features Section-->
+<section class="overlay bg-fixed" @Html.Raw(backgroundStyle)">
+    <div class="container">
+        <div class="section-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row align-items-center text-white">
+                        <div class="col-md-4 offset-md-2 col-sm-6">
+                            @if(Model.YourName != ""){
+                            <h4 class="mb-4">@Model.YourName proudly presents: this site!</h4>
+                            }else{
+                            <h4 class="mb-4">@umbracoHelper.GetDictionaryValue("YourName")</h4>
+                            }
+                            @if(Model.YourDescription != ""){
+                            <p>@Model.YourDescription</p>
+                            }else{
+                            <p>@umbracoHelper.GetDictionaryValue("AboutYourself")</p>
+                            }
+                        </div>
+                        @if(Model.YourBeautifulFace != null){
+                        <div class="col-md-4 offset-md-right-2 col-sm-6">
+                            <img class="my-5 img-circle" src="@Url.GetCropUrl(Model.YourBeautifulFace, "Portrait")" alt="">
+                        </div>
+                        }else{
+                        <div class="col-md-4 offset-md-right-2 col-sm-6">
+                            <img class="my-5 img-circle" src="https://via.placeholder.com/350x350" alt="">
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@if(typedMultiNodeTreePicker!=null){
+<!-- Portfolio Section -->
+<section id="blog" class="bg-grey">
+    <div class="container">
+        <div class="section-content">
+            <div class="title-wrap mb-5">
+                <h2 class="section-title">@umbracoHelper.GetDictionaryValue("OurProducts")</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12 blog-holder">
+                    <div class="row">
+                        @(await Html.PartialAsync("ProductListing", Model))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    }
+<!-- End of Portfolio Section -->
+    @if(Model.Value("testimonials") !=null){
+<!-- Testimonial Section-->
+<section id="testimonial" class="section-padding bg-fixed bg-white overlay">
+    <div class="container">
+        <div class="section-content">
+            <div class="heading-section text-center">
+                <h2> @umbracoHelper.GetDictionaryValue("Testimonials") </h2>
+            </div>
+            <div class="row">
+                <div class="testi-content testi-carousel owl-carousel">
+                    @{
+                    foreach(var testimonial in Model.Value<IEnumerable<BlockListItem>>("testimonials")){
+                        @*Replace with blocklist*@
+                    var image = testimonial.Content.Value<IPublishedContent>("testimonialAuthorsPicture");
+                        <div class="testi-item text-center">
+                            <i class="testi-icon fa fa-3x fa-quote-left"></i>
+                            <h4 class="testi-text">@testimonial.Content.Value("testimonialText")</h4>
+                            <div class="testi-meta-inner d-flex justify-content-center align-items-center">
+                                <div class="testi-img mr-2">
+                                    @if(image!= null){
+                                    <img src="@image.Url()" alt="" />
+                                }
+                                </div>
+                                <div class="testi-details">
+                                    <p class="testi-author mb-0 font-weight-bolder">@testimonial.Content.Value("testimonialAuthor")</p>
+                                    <p class="testi-desc mb-0">@testimonial.Content.Value("testimonialAuthorsTitle")</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    }
+
+<section id="client" @Html.Raw(backgroundStyle) class="overlay bg-fixed">
+    <div class="container">
+        <div class="section-content">
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="title-wrap mb-5 above">
+                        <h2>@umbracoHelper.GetDictionaryValue("OurPartners")</h2>
+                    </div>
+                </div>
+                <div class="col-md-12 client-holder">
+                    <div class="client-slider owl-carousel">
+                        @if(Model.Value("companyLogos") !=null && Model.Value<IEnumerable<IPublishedContent>>("companyLogos").Any()){
+                        foreach(var logo in Model.Value<IEnumerable<IPublishedContent>>("companyLogos")){
+                        <div class="client-item">
+                            <img class="img-responsive" src="@logo.Url()" alt=" ">
+                        </div>
+                        }
+                        }
+                        else{
+                        <div class="client-item">
+                            <!-- Alternatively you could do Umbraco.Media(Guid.Parse("b8dc67f9b88e4d79acf2246ffcc77d09")) to get a media item but the picker approach is safer -->
+                            @if(Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos") !=null && Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").Any()){
+                            var imgLogo = Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").FirstOrDefault();
+                            <img class="img-responsive" src="@imgLogo.Url()" alt=" ">
+                            }
+                            else{
+                            <img class="img-responsive" src="https://placehold.co/200x200" alt=" ">
+                            }
+                        </div>
+                       }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,105 @@
+{
+  "Name": "Blog",
+  "Alias": "blog",
+  "DefaultTemplate": "umb://template/a405742412b947ad910fe37a95154a61",
+  "AllowedTemplates": [
+    "umb://template/a405742412b947ad910fe37a95154a61"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-book-alt-2",
+  "Thumbnail": "folder.png",
+  "Description": "A singular blog page.",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7fc181c7-a48c-4026-bc0d-2fde4c70bc4c",
+      "Name": "Fields",
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": [
+        {
+          "Key": "2695abc8-7f90-45e4-bb31-13d0a841d46b",
+          "Alias": "summary",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Description": "A quick summary used on the Blogs listing page and on the blog itself below the title.",
+          "Name": "Summary",
+          "SortOrder": 1
+        },
+        {
+          "Key": "3ddaa936-8336-407f-9de4-25267f3922f7",
+          "Alias": "categories",
+          "DataType": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+          "Name": "Categories",
+          "SortOrder": 3
+        },
+        {
+          "Key": "a37bd025-999c-4911-b1c3-96c65c14cbcf",
+          "Alias": "backgroundImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Description": "Blog image used on blog listing and as a header pic.",
+          "Name": "Image"
+        },
+        {
+          "Key": "c615f5f3-40f0-48df-9817-19f06f1dd11c",
+          "Alias": "publishingDate",
+          "DataType": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+          "Description": "If you want to override the default date-when-content-is-created.",
+          "Name": "Publishing Date",
+          "SortOrder": 5
+        },
+        {
+          "Key": "d46a294b-dc25-41d4-926f-e2c4496f7513",
+          "Alias": "bodyText",
+          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+          "Name": "Body Text",
+          "SortOrder": 2
+        },
+        {
+          "Key": "e3c1b091-c294-4a10-ab03-1a42e726f26e",
+          "Alias": "author",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Author",
+          "SortOrder": 4
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/624443c7781d4228a8367405f8630ae7",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/b6b73142b9c14bf8a16de1c23320b549",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/a405742412b947ad910fe37a95154a61",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Wiki",
+  "Alias": "Wiki",
+  "File": "umb://template-file/Wiki.cshtml",
+  "Master": "umb://template/3c923e98edcf42839a870a51e497326f",
+  "Udi": "umb://template/5e3c8ddf45ca43608e0bdedd5fcff684",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/Wiki.cshtml",
+      "Ordering": true,
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://template/3c923e98edcf42839a870a51e497326f",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "16.0.4"
+}

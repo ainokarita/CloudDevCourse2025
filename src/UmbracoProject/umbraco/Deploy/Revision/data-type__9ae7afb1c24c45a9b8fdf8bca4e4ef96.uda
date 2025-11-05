@@ -1,0 +1,19 @@
+{
+  "Name": "Products - Default Currency - Radio Button List Property Editor UI",
+  "EditorAlias": "Umbraco.RadioButtonList",
+  "EditorUiAlias": "Umb.PropertyEditorUi.RadioButtonList",
+  "DatabaseType": "Nvarchar",
+  "Configuration": {
+    "items": [
+      "USD",
+      "YEN",
+      "GBP",
+      "EUR",
+      "DKK"
+    ]
+  },
+  "Udi": "umb://data-type/9ae7afb1c24c45a9b8fdf8bca4e4ef96",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "16.0.4"
+}

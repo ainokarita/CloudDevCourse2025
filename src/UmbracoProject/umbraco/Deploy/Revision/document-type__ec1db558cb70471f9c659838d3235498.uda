@@ -1,0 +1,64 @@
+{
+  "Name": "Person",
+  "Alias": "person",
+  "DefaultTemplate": "umb://template/964bb015b3b8485a9d71a84c6d7eb97a",
+  "AllowedTemplates": [
+    "umb://template/964bb015b3b8485a9d71a84c6d7eb97a"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-user",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "6c42f2a3-964e-4294-9686-b03f277dd3b1",
+      "Name": "Fields",
+      "Alias": "fields",
+      "PropertyTypes": [
+        {
+          "Key": "38340627-a484-4d3a-809c-607d14d43956",
+          "Alias": "image",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Image"
+        },
+        {
+          "Key": "aac8ab86-d7e2-4ad2-92be-e0548f272905",
+          "Alias": "githubProfile",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Github Profile",
+          "SortOrder": 1
+        },
+        {
+          "Key": "ec90063b-2cdc-4f75-8984-ddfccf726e1d",
+          "Alias": "xHandle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Description": "No @ symbol as first char ",
+          "Name": "X handle",
+          "SortOrder": 2
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/ec1db558cb70471f9c659838d3235498",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/964bb015b3b8485a9d71a84c6d7eb97a",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

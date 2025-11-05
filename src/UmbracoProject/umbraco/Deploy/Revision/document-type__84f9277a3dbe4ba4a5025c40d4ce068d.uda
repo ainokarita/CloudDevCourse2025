@@ -1,0 +1,46 @@
+{
+  "Name": "Blogs",
+  "Alias": "blogs",
+  "DefaultTemplate": "umb://template/13728bc5c2ca43d3a5834188ddb4d9dd",
+  "AllowedTemplates": [
+    "umb://template/13728bc5c2ca43d3a5834188ddb4d9dd"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-book",
+  "Thumbnail": "folder.png",
+  "Description": "This page will hold blog items.",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedChildContentTypes": [
+      "umb://document-type/624443c7781d4228a8367405f8630ae7"
+    ]
+  },
+  "CompositionContentTypes": [
+    "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+    "umb://document-type/bb2974c6a60140259da817bb459099ca"
+  ],
+  "PropertyGroups": [],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/84f9277a3dbe4ba4a5025c40d4ce068d",
+  "Dependencies": [
+    {
+      "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/624443c7781d4228a8367405f8630ae7",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/bb2974c6a60140259da817bb459099ca",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/13728bc5c2ca43d3a5834188ddb4d9dd",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

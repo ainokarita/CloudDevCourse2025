@@ -1,0 +1,73 @@
+{
+  "Name": "Testimonial",
+  "Alias": "testimonial",
+  "AllowedTemplates": [],
+  "HistoryCleanup": {},
+  "Icon": "icon-quote color-blue",
+  "Thumbnail": "folder.png",
+  "Description": "Testimonial for the home page.",
+  "Permissions": {
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/41c391bfbcb0485daf444bc918a2ff61",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "f6f0a9fa-65ee-48b2-84bf-d36e30390529",
+      "Name": "Testimonials contents",
+      "Alias": "testimonialsContents",
+      "PropertyTypes": [
+        {
+          "Key": "3f406f2b-1d98-480b-8c35-13329abc812a",
+          "Alias": "testimonialAuthor",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Testimonial Author",
+          "SortOrder": 1
+        },
+        {
+          "Key": "59aaca0d-5b3a-41e0-914d-7fb8451a3423",
+          "Alias": "testimonialText",
+          "DataType": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+          "Name": "Testimonial Text"
+        },
+        {
+          "Key": "b30c1e52-8435-4a54-8e27-86363a758435",
+          "Alias": "testimonialAuthorsTitle",
+          "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+          "Name": "Testimonial Author\u0027s Title",
+          "SortOrder": 2
+        },
+        {
+          "Key": "cf2c442a-724b-4856-8275-c207a9014aa1",
+          "Alias": "testimonialAuthorsPicture",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Testimonial Author\u0027s Picture",
+          "SortOrder": 3
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/d7e410b8e1ed42b289438dc21f8dc464",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/c6bac0dd4ab945b18e30e4b619ee5da3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type-container/41c391bfbcb0485daf444bc918a2ff61",
+      "Ordering": true
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}

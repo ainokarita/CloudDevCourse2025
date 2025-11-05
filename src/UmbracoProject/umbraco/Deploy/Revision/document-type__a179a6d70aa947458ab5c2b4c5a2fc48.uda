@@ -1,0 +1,66 @@
+{
+  "Name": "Block Grid Text Page",
+  "Alias": "blockGridTextPage",
+  "DefaultTemplate": "umb://template/9d653792f21f45f1ab1a102ce73fc5aa",
+  "AllowedTemplates": [
+    "umb://template/9d653792f21f45f1ab1a102ce73fc5aa"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-document-html",
+  "Thumbnail": "folder.png",
+  "Description": "Generic type of page where the body is using the Block Grid editor",
+  "Permissions": {
+    "AllowVaryingByCulture": true,
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [
+    "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+    "umb://document-type/bb2974c6a60140259da817bb459099ca"
+  ],
+  "PropertyGroups": [
+    {
+      "Key": "21e5accc-558f-45e9-957e-4392e984f74f",
+      "Name": "Fields",
+      "Type": 1,
+      "Alias": "fields",
+      "PropertyTypes": []
+    },
+    {
+      "Key": "7d26edc8-1d0e-48d7-b596-ffafe3eac835",
+      "Name": "Fields",
+      "Alias": "fields/fields",
+      "PropertyTypes": [
+        {
+          "Key": "30ca7691-b714-4977-909e-27838661df0b",
+          "Alias": "bodyText",
+          "DataType": "umb://data-type/90e14cb194dc4050bf006710b27ee45d",
+          "Name": "Body Text",
+          "VariesByCulture": true
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/a179a6d70aa947458ab5c2b4c5a2fc48",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/90e14cb194dc4050bf006710b27ee45d",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/1e49f665578a45418762ea2a69f90dcc",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://document-type/bb2974c6a60140259da817bb459099ca",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/9d653792f21f45f1ab1a102ce73fc5aa",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}
