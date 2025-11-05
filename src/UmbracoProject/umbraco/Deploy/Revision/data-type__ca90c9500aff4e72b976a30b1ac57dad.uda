@@ -4,17 +4,37 @@
   "EditorUiAlias": "Umb.PropertyEditorUi.Tiptap",
   "Configuration": {
     "extensions": [
+      "Umb.Tiptap.RichTextEssentials",
+      "Umb.Tiptap.Anchor",
+      "Umb.Tiptap.Block",
+      "Umb.Tiptap.Blockquote",
+      "Umb.Tiptap.Bold",
+      "Umb.Tiptap.BulletList",
+      "Umb.Tiptap.CodeBlock",
       "Umb.Tiptap.Embed",
-      "Umb.Tiptap.Link",
       "Umb.Tiptap.Figure",
+      "Umb.Tiptap.Heading",
+      "Umb.Tiptap.HorizontalRule",
+      "Umb.Tiptap.HtmlAttributeClass",
+      "Umb.Tiptap.HtmlAttributeDataset",
+      "Umb.Tiptap.HtmlAttributeId",
+      "Umb.Tiptap.HtmlAttributeStyle",
+      "Umb.Tiptap.HtmlTagDiv",
+      "Umb.Tiptap.HtmlTagSpan",
       "Umb.Tiptap.Image",
+      "Umb.Tiptap.Italic",
+      "Umb.Tiptap.Link",
+      "Umb.Tiptap.MediaUpload",
+      "Umb.Tiptap.OrderedList",
+      "Umb.Tiptap.Strike",
       "Umb.Tiptap.Subscript",
       "Umb.Tiptap.Superscript",
       "Umb.Tiptap.Table",
-      "Umb.Tiptap.Underline",
       "Umb.Tiptap.TextAlign",
-      "Umb.Tiptap.MediaUpload",
-      "Umb.Tiptap.Block"
+      "Umb.Tiptap.TextDirection",
+      "Umb.Tiptap.TextIndent",
+      "Umb.Tiptap.TrailingNode",
+      "Umb.Tiptap.Underline"
     ],
     "maxImageSize": 500,
     "overlaySize": "medium",
@@ -47,30 +67,13 @@
         ],
         [
           "Umb.Tiptap.Toolbar.MediaPicker",
-          "Umb.Tiptap.Toolbar.EmbeddedMedia",
-          "Umb.Tiptap.Toolbar.StyleSelect",
-          "Umb.Tiptap.Toolbar.BlockPicker"
+          "Umb.Tiptap.Toolbar.EmbeddedMedia"
         ]
       ]
-    ],
-    "blocks": [
-      {
-        "contentElementTypeKey": "61c71987-31b5-4fac-bb3a-8b4b9b4e11e2"
-      },
-      {
-        "contentElementTypeKey": "e06c8101-9d59-476c-9d90-adbae279eb18"
-      }
     ]
   },
   "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
-  "Dependencies": [
-    {
-      "Udi": "umb://document-type/61c7198731b54facbb3a8b4b9b4e11e2"
-    },
-    {
-      "Udi": "umb://document-type/e06c81019d59476c9d90adbae279eb18"
-    }
-  ],
+  "Dependencies": [],
   "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
   "__version": "16.0.4"
 }
