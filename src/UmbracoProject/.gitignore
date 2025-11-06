@@ -480,3 +480,5 @@ umbraco-package-schema.json
 
 # Media files
 /wwwroot/media/
+
+**/git-patch.diff
