@@ -16,13 +16,6 @@
       "Alias": "content",
       "PropertyTypes": [
         {
-          "Key": "123b33a4-1fdf-4eb2-ab3a-1f8bd935d950",
-          "Alias": "rte",
-          "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
-          "Name": "rte",
-          "SortOrder": 1
-        },
-        {
           "Key": "de627bff-6ef6-43b7-8f00-cfe286c074de",
           "Alias": "textbox",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
@@ -36,10 +29,6 @@
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true
-    },
-    {
-      "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
       "Ordering": true
     }
   ],
