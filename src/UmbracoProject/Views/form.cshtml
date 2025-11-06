@@ -1,0 +1,91 @@
+﻿@using Umbraco.Cms.Core.Models.PublishedContent
+@using Umbraco.Extensions
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Forms.Web;
+@using Umbraco.Forms.Web.Extensions;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    Layout = "basicNav.cshtml";
+    var formId = Model.Value<Guid?>("pickedForm");
+
+    var img = Model.Value<IPublishedContent>("image");
+    var imgUrl = img?.Url();
+    var imgAlt = img?.Value<string>("umbracoAltText") ?? img?.Name ?? "Image";
+}
+@Html.RenderUmbracoFormDependencies(Url)
+<style>
+    .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .split {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+        .split .left {
+            flex: 1 1 0;
+            min-width: 0;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .split .right {
+            flex: 0 0 360px;
+            margin-top: 6rem;
+        }
+
+            .split .right img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+            }
+
+    /* your select width tweak */
+    :root {
+        --form-select-width: 26rem;
+    }
+
+    .umbraco-forms-form select {
+        width: var(--form-select-width) !important;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+
+    .umbraco-forms-form .umbraco-forms-field,
+    .umbraco-forms-form .umbraco-forms-field .umbraco-forms-field-wrapper {
+        width: auto;
+        max-width: none;
+    }
+
+    /* IMPORTANT: ensure conditional fields actually hide/show */
+    .umbraco-forms-hidden {
+        display: none !important;
+    }
+</style>
+
+<div class="wrap">
+    <div class="split">
+        <div class="left">
+            @if (formId.HasValue)
+            {
+                <!-- Let Forms inline its own JS (do NOT exclude scripts here) -->
+                <umb-forms-render form-id="@formId.Value" theme="default" />
+            }
+        </div>
+
+        <div class="right">
+            @if (!string.IsNullOrWhiteSpace(imgUrl))
+            {
+                <img src="@imgUrl" alt="@imgAlt" loading="lazy" />
+            }
+        </div>
+    </div>
+</div>

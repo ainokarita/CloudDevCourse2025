@@ -1,0 +1,63 @@
+{
+  "Name": "Form",
+  "Alias": "form",
+  "DefaultTemplate": "umb://template/dc9f46611d124ec8bdac7df5395ee0af",
+  "AllowedTemplates": [
+    "umb://template/dc9f46611d124ec8bdac7df5395ee0af"
+  ],
+  "HistoryCleanup": {},
+  "Icon": "icon-message",
+  "Thumbnail": "folder.png",
+  "Permissions": {
+    "AllowedChildContentTypes": []
+  },
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "c95a3e69-2e5b-4397-8f6a-b920bf0056a7",
+      "Name": "Content",
+      "Alias": "content",
+      "PropertyTypes": [
+        {
+          "Key": "09d65993-cfc1-45e2-a2e6-dc22fbca9139",
+          "Alias": "pickedForm",
+          "DataType": "umb://data-type/bd06d910a266421ab17580f942509af9",
+          "Name": "Picked Form"
+        },
+        {
+          "Key": "65d1bb5d-e4a2-4f3d-8b19-888d84f8f81c",
+          "Alias": "image",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Image",
+          "SortOrder": 2
+        },
+        {
+          "Key": "86b190df-6e2b-4fd0-bcdb-22004ef488d6",
+          "Alias": "backgroundImage",
+          "DataType": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+          "Name": "Background Image",
+          "SortOrder": 1
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/b28045e924bd4f09905d7a6697dad91c",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/ad9f0cf2bda245d59ea1a63cfc873fd3",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://data-type/bd06d910a266421ab17580f942509af9",
+      "Ordering": true
+    },
+    {
+      "Udi": "umb://template/dc9f46611d124ec8bdac7df5395ee0af",
+      "Ordering": true,
+      "Mode": "Exist"
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "16.0.4"
+}
