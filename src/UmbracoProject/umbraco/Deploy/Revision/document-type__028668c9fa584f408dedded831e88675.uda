@@ -145,7 +145,7 @@
           "Key": "0a8ffe16-df47-4b3d-9bcc-3ddb50caf367",
           "Alias": "companyPhone",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Company Phone",
+          "Name": "Company Phones",
           "SortOrder": 1,
           "VariesByCulture": true
         },
