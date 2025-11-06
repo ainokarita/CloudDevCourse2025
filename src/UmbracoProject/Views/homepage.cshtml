@@ -37,7 +37,7 @@
                 <span>Umbraco <br /> Training</span>
             }
         </h1>
-
+        @await Component.InvokeAsync("GiphyWidget")
     </div>
     @if (Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos") != null && Model.Value<IEnumerable<IPublishedContent>>("umbracoLogos").Any())
     {
