@@ -18,7 +18,8 @@
       "umb://document-type/29e5e38e4bac4a54bfe9bc5fe44b2169",
       "umb://document-type/0294075eaf994e85a055fd33a1c865f7",
       "umb://document-type/483d9776f80b4ac5959deb61d45d949b",
-      "umb://document-type/a179a6d70aa947458ab5c2b4c5a2fc48"
+      "umb://document-type/a179a6d70aa947458ab5c2b4c5a2fc48",
+      "umb://document-type/455c90a0da454b2d938138e497f6fafc"
     ]
   },
   "CompositionContentTypes": [],
@@ -145,7 +146,7 @@
           "Key": "0a8ffe16-df47-4b3d-9bcc-3ddb50caf367",
           "Alias": "companyPhone",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Name": "Company Phones",
+          "Name": "Company Phone",
           "SortOrder": 1,
           "VariesByCulture": true
         },
@@ -271,6 +272,10 @@
     },
     {
       "Udi": "umb://document-type/29e5e38e4bac4a54bfe9bc5fe44b2169",
+      "Mode": "Exist"
+    },
+    {
+      "Udi": "umb://document-type/455c90a0da454b2d938138e497f6fafc",
       "Mode": "Exist"
     },
     {
