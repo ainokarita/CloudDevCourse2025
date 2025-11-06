@@ -2,16 +2,10 @@
   "Name": "Deployments",
   "Alias": "Deployments",
   "File": "umb://template-file/Deployments.cshtml",
-  "Master": "umb://template/3c923e98edcf42839a870a51e497326f",
   "Udi": "umb://template/e853e9b3150c44b7be29d401fcd057a9",
   "Dependencies": [
     {
       "Udi": "umb://template-file/Deployments.cshtml",
-      "Ordering": true,
-      "Mode": "Exist"
-    },
-    {
-      "Udi": "umb://template/3c923e98edcf42839a870a51e497326f",
       "Ordering": true,
       "Mode": "Exist"
     }
